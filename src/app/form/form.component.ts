@@ -5,8 +5,8 @@ import { HttpClient } from '@angular/common/http';
 interface Field {
   field: string;
   label: string;
-  type: 'text' | 'check';
-  hidden: 'true' | 'false';
+  type: string;
+  hidden: string;
   mandatory?: boolean;
   value?: string;
 }
