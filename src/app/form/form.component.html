@@ -1,18 +1,30 @@
-<mat-card>
-    <mat-card-title>Web Form</mat-card-title>
-    <mat-card-content>
-      <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <div *ngFor="let field of fields">
-          <ng-container *ngIf="field.hidden !== 'true'">
-            <mat-form-field appearance="fill">
-              <mat-label>{{ field.label }}</mat-label>
-              <input *ngIf="field.type === 'text'" matInput [formControlName]="field.field">
-              <mat-checkbox *ngIf="field.type === 'check'" [formControlName]="field.field" >{{ field.label }}</mat-checkbox>
-            </mat-form-field>
-          </ng-container>
-        </div>
-        <button mat-raised-button color="primary" type="submit">Submit</button>
-      </form>
-    </mat-card-content>
-  </mat-card>
-  
+<header>
+  <img src="https://dummyimage.com/100x100/1AA7EC/fff&text=Gerimedica" alt="Germedica Logo">
+
+  <nav>
+    <a href="#">Home</a> 
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <div class="form-container">
+    <mat-card>
+      <mat-card-content>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()"  class="form">
+          <div *ngFor="let field of fields">
+            <ng-container *ngIf="field.hidden !== 'true'">
+              <mat-form-field appearance="fill">
+                <mat-label>{{ field.label }}</mat-label>
+                <input *ngIf="field.type === 'text'" matInput [formControlName]="field.field">
+                <mat-checkbox *ngIf="field.type === 'check'" [formControlName]="field.field">{{ field.label }}</mat-checkbox>
+              </mat-form-field>
+            </ng-container>
+          </div>
+          <button mat-raised-button color="primary" type="submit">Submit</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</main>

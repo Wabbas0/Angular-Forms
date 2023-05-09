@@ -33,11 +33,11 @@ export class FormComponent implements OnInit {
   private updateFormControls() {
     const controls: {[key: string]: FormControl} = {};
     for (const field of this.fields) {
-      controls[field.field] = new FormControl(field.value || '', field.mandatory ? Validators.required : null);
+      const validators = field.mandatory ? Validators.required : null;
+      controls[field.field] = new FormControl(field.value || '', validators);
     }
     this.form = new FormGroup(controls);
   }
-
   onSubmit() {
     console.log(this.form.value);
   }
