@@ -1,0 +1,52 @@
+[
+    {
+        "field": "name",
+        "label": "Name",
+        "type": "text",
+        "hidden": "false",
+        "mandatory": true
+    },
+    {
+        "field": "name2",
+        "label": "Name",
+        "type": "text",
+        "hidden": "false",
+        "mandatory": true
+    },
+    {
+        "field": "email",
+        "label": "Email",
+        "value": "email@example.com",
+        "type": "text",
+        "hidden": "false",
+        "mandatory": true
+    },
+    {
+        "field": "email2",
+        "label": "Email",
+        "value": "Abbas@example.com",
+        "type": "text",
+        "hidden": "false",
+        "mandatory": true
+    },
+    {
+        "field": "confirm",
+        "label": "Checkbox with confirmation",
+        "type": "check",
+        "hidden": "false",
+        "value": true      
+    },
+    {
+        "field": "hiddenField",
+        "label": "",
+        "type": "text",
+        "hidden": "true",
+        "mandatory": false
+    },
+    {
+        "field": "confirm",
+        "label": "Checkbox with confirmation",
+        "type": "email",
+        "hidden": "false"       
+    }
+]
